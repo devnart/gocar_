@@ -627,6 +627,57 @@ section.reserve .inner-reserve select option {
   color: #0a043c;
 }
 
+section.reserve .inner-reserve .transmission {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.reserve .inner-reserve .transmission input[type="radio"] {
+  display: none;
+}
+
+section.reserve .inner-reserve .transmission label {
+  padding: 16px;
+  border-radius: 5px;
+  border: 2px solid white;
+  background: #fff0;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 160px;
+  cursor: pointer;
+}
+
+section.reserve .inner-reserve .transmission label:last-child {
+  margin-right: 0;
+}
+
+section.reserve .inner-reserve .transmission label::before {
+  height: 20px;
+  width: 20px;
+  content: "";
+  margin-right: 15px;
+  border-radius: 50%;
+  border: solid 2px white;
+}
+
+section.reserve .inner-reserve .transmission input[type="radio"]:checked + label {
+  background: white;
+  color: #0a043c;
+}
+
+section.reserve .inner-reserve .transmission input[type="radio"]:checked + label::before {
+  height: 12px;
+  width: 12px;
+  border: solid 6px #0a043c;
+}
+
 section.reserve .inner-reserve .boit {
   color: white;
   display: -webkit-box;
