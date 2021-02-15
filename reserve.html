@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoCar</title>
+    <meta name="description" content="Rent cars online" />
+    <meta name="keywords" content="cars, rent, online" />
+    <meta name="author" content="Hamza Bouchikhi" />
+    <link rel="stylesheet" href="css/reserve.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar container">
+        <img src="images/logo.svg" alt="gocar logo" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reserve.html">Reserve</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="reserve">
+      <h2>Reserve Now</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio officia
+        vero consequatur, voluptatum repellendus enim autem. Adipisci laborum
+        libero, a quos aut ut necessitatibus nihil omnis? Consectetur ipsum
+        magni maiores.
+      </p>
+      <div class="inner-reserve container">
+        <form action="">
+          <h3>Select Type Of Vehicle</h3>
+          <select name="Type" id="type" onchange="clear()">
+            <option>Select Type</option>
+            <option>Moto</option>
+            <option>Citadine</option>
+            <option>Compact</option>
+            <option>Berline</option>
+            <option>Utilitaire</option>
+            <option>Engin de Chantier</option>
+            <option>Camion</option>
+          </select>
+        </form>
+        <h3>Fuel</h3>
+        <div class="boit">
+
+            <input type="radio" id="elect" name="boit" value="electrique" />
+            <label for="elect">Electrique</label>
+            <input type="radio" id="hybride" name="boit" value="hybride" />
+            <label for="hybride">Hybride</label>
+            <input type="radio" id="essence" name="boit" value="essence" />
+            <label for="essence">Essence</label>
+            <input type="radio" id="diesel" name="boit" value="diesel" />
+            <label for="diesel">Diesel</label>
+        </div>
+        <h3>Total Days</h3>
+        <input type="text" name="price" placeholder="Type Days..">
+        <button>Submit</button>
+        <div class="total">
+          <h3>Total : 0.0$</h3>
+        </div>
+      </div>
+
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>

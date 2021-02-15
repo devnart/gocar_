@@ -1,0 +1,114 @@
+@import "style.scss";
+
+.header {
+  position: relative;
+}
+section.reserve {
+  padding: 90px 0;
+  text-align: center;
+  h2 {
+    @include h2;
+  }
+  p {
+    @include pg();
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    opacity: 0.4;
+  }
+  .inner-reserve {
+    padding: 40px 80px;
+    background: #08032e;
+    border-radius: 10px;
+    text-align: left;
+
+    h3 {
+      color: white;
+      color: #fff;
+      font-family: "Playfair Display", serif;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+
+    select {
+      color: white;
+      padding: 16px;
+      border-radius: 5px;
+      border: 2px solid white;
+      /* appearance: none; */
+      background: #fff0;
+      outline: none;
+
+      option {
+        color: $dark;
+      }
+    }
+    .boit {
+      color: white;
+      display: flex;
+      input[type="radio"] {
+        display: none;
+      }
+      label {
+        padding: 16px;
+        border-radius: 5px;
+        border: 2px solid white;
+        background: #fff0;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        width: 160px;
+        cursor: pointer;
+        &:last-child {
+          margin-right: 0;
+        }
+        &::before {
+
+          height: 20px;
+          width: 20px;
+          content: "";
+          margin-right: 15px;
+          border-radius: 50%;
+          border: solid 2px white;
+        }
+
+      }
+      input[type="radio"]:checked + label {
+        background: white;
+        color: $dark;
+      }
+      input[type="radio"]:checked + label::before {
+        height: 12px;
+        width: 12px;
+        border: solid 6px $dark;
+      }
+
+    }
+    input[name="price"] {
+      padding: 16px;
+      border-radius: 5px;
+      border: 2px solid white;
+      outline: none;
+    }
+    button {
+      color: $dark;
+      padding: 16px 45px;
+      border-radius: 5px;
+      font-weight: 600;
+      background: white;
+      border: 1px solid #fff;
+      outline: none;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+    .total {
+      h3 {
+        text-align: right;
+      }
+    }
+  }
+}
