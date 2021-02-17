@@ -30,7 +30,15 @@ section.reserve {
       font-size: 1.5rem;
       margin-top: 1.5rem;
     }
-
+    input[type="radio" i]:disabled + label{
+      cursor: no-drop;
+      color: gray;
+      border: 2px solid gray;
+      opacity: 0.8;
+      &::before {
+        border: solid 2px gray;
+      }
+    }
 
     select {
       color: white;
@@ -126,7 +134,7 @@ section.reserve {
       }
 
     }
-    input[name="price"] {
+    input[name="days"] {
       padding: 16px;
       border-radius: 5px;
       border: 2px solid white;
@@ -148,7 +156,38 @@ section.reserve {
     .total {
       h3 {
         text-align: right;
+        span {
+          font-size: 3rem;
+          font-weight: 700;
+          color: $primary;
+        }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 599px) and (max-width: 767px) {
+  section.reserve .inner-reserve {
+    padding: 40px 40px;
+    .transmission,.boit {
+      flex-wrap: wrap;
+      label {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+  section.reserve .inner-reserve {
+    
+    .transmission,.boit {
+      flex-wrap: wrap;
+      label {
+        margin-bottom: 5px;
+      }
+    }
+    input {
+      margin-bottom: 5px;
     }
   }
 }

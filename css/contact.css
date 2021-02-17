@@ -661,6 +661,17 @@ header nav .showClose {
   header nav .ham {
     right: 60px;
     display: block;
+    outline: none;
+  }
+  .header .navbar ul li {
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.1;
+    margin-bottom: 20px;
+  }
+  .ham_menu {
+    font-size: 1.5rem;
+    padding-top: 90px;
   }
   .gallery-container :nth-child(1) {
     grid-column: 1 / span3;
@@ -686,6 +697,7 @@ header nav .showClose {
   header nav .ham {
     right: 40px;
     display: block;
+    outline: none;
   }
   .header .navbar ul li {
     padding: 15px;
@@ -770,6 +782,13 @@ header nav .showClose {
   header nav .ham {
     right: 40px;
     display: block;
+    outline: none;
+  }
+  .header .navbar ul li {
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.1;
+    margin-bottom: 20px;
   }
 }
 
@@ -1000,4 +1019,123 @@ section.reserve .inner-reserve .total h3 span {
     margin-bottom: 5px;
   }
 }
-/*# sourceMappingURL=reserve.css.map */
+
+section.contact .inner-contact {
+  padding: 90px 80px;
+  text-align: center !important;
+}
+
+section.contact .inner-contact div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+section.contact .inner-contact div input {
+  border: none;
+  outline: none;
+  padding: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-family: "Lato", sans-serif;
+}
+
+section.contact .inner-contact textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  padding: 20px;
+  outline: none;
+}
+
+section.contact .inner-contact a {
+  background: #a3ddcb;
+  margin-top: 20px;
+  text-align: center;
+}
+
+section.contact .inner-contact a:hover {
+  background: white;
+}
+
+section.reserve .inner-reserve button {
+  margin-top: 10px;
+  border: none;
+  background: #fff;
+  border-radius: 0;
+}
+
+.modal {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal .inner-modal {
+  color: #0a043c;
+  background: #a3ddcb;
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  padding-bottom: 60px;
+}
+
+.modal .inner-modal > span {
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin: 15px;
+  background: #0a043c;
+  color: #a3ddcb;
+  /* text-align: right; */
+  float: right;
+  padding: 12px 16px;
+  border-radius: 5px;
+}
+
+.modal .inner-modal h4 {
+  font-size: 1rem;
+  padding: 20px 0;
+  font-weight: 800;
+}
+
+.modal .inner-modal h4:first-of-type {
+  clear: both;
+}
+
+.modal .inner-modal h4 span {
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+  .contact .inner-contact div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

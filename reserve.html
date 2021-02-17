@@ -10,13 +10,21 @@
     <meta name="author" content="Hamza Bouchikhi" />
     <link rel="stylesheet" href="css/reserve.css" />
   </head>
-  <body>
+  <body style="overflow-x: hidden;">
     <header class="header">
       <nav class="navbar container">
         <img src="images/logo.svg" alt="gocar logo" />
+        <button class="ham"></button>
+        <div class="ham_container">
+          <ul class="ham_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reserve.html">Reserve</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="reserve.html">Reserve</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -34,7 +42,7 @@
       <div class="inner-reserve container">
         <form action="">
           <h3>Select Type Of Vehicle</h3>
-          <select name="Type" id="type" onchange="clear()">
+          <select name="Type" id="type" onchange="clearList(),getType()">
             <option>Select Type</option>
             <option>Moto</option>
             <option>Citadine</option>
@@ -47,32 +55,77 @@
         </form>
         <h3>Transmission</h3>
         <div class="transmission">
-          <input type="radio" id="manual" name="transmission" value="manual"/>
+          <input type="radio" id="manual" name="transmission" value="manual" />
           <label for="manual">Manual</label>
           <input type="radio" id="auto" name="transmission" value="auto" />
           <label for="auto">Automatique</label>
         </div>
         <h3>Fuel</h3>
         <div class="boit">
-
-            <input type="radio" id="elect" name="boit" value="electrique" />
-            <label for="elect">Electrique</label>
-            <input type="radio" id="hybride" name="boit" value="hybride" />
-            <label for="hybride">Hybride</label>
-            <input type="radio" id="essence" name="boit" value="essence" />
-            <label for="essence">Essence</label>
-            <input type="radio" id="diesel" name="boit" value="diesel" />
-            <label for="diesel">Diesel</label>
+          <input type="radio" id="elect" name="boit" value="0.05" />
+          <label for="elect">Electrique</label>
+          <input type="radio" id="hybride" name="boit" value="0.09" />
+          <label for="hybride">Hybride</label>
+          <input type="radio" id="essence" name="boit" value="0.14" />
+          <label for="essence">Essence</label>
+          <input type="radio" id="diesel" name="boit" value="0.21" />
+          <label for="diesel">Diesel</label>
         </div>
         <h3>Total Days</h3>
-        <input type="text" name="price" placeholder="Type Days..">
-        <button>Submit</button>
+        <input type="number" id="days" name="days" placeholder="Type Days.." />
+        <button onclick="calcPrice()">Submit</button>
         <div class="total">
-          <h3>Total : 0.0$</h3>
+          <h3>Total : <span id="totalPrice">0.0</span>$</h3>
         </div>
       </div>
-
     </section>
     <script src="js/main.js"></script>
+    <footer class="container">
+      <div class="footer-inner">
+        <div>
+          <h4>About Us</h4>
+          <hr />
+          <ul class="footer-menu">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Questions</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <hr />
+          <ul class="footer-menu">
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Cars</a></li>
+            <li><a href="#">Advertising</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal Notice</h4>
+          <hr />
+          <ul class="footer-menu">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms Of Use</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
+      <p>All Rights Reserveed - GoCar 2020</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+      var navbar = document.querySelector(".ham_menu");
+      var ham = document.querySelector(".ham");
+
+      ham.addEventListener("click", toggleHamburger);
+
+      function toggleHamburger() {
+        navbar.classList.toggle("showNav");
+        ham.classList.toggle("showClose");
+      }
+    </script>
   </body>
 </html>
