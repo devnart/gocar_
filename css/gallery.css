@@ -582,7 +582,7 @@ footer p {
 
 header nav .ham {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 40px;
   right: 80px;
   z-index: 100;
@@ -601,7 +601,7 @@ header nav .showClose {
 }
 
 header nav .ham_menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: black;
@@ -661,6 +661,17 @@ header nav .showClose {
   header nav .ham {
     right: 60px;
     display: block;
+    outline: none;
+  }
+  .header .navbar ul li {
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.1;
+    margin-bottom: 20px;
+  }
+  .ham_menu {
+    font-size: 1.5rem;
+    padding-top: 90px;
   }
   .gallery-container :nth-child(1) {
     grid-column: 1 / span3;
@@ -676,6 +687,15 @@ header nav .showClose {
   .container {
     max-width: 320px;
   }
+  section.about {
+    margin-bottom: 20px;
+  }
+  section.about .container a {
+    display: inline;
+  }
+  section.about2 {
+    padding-bottom: 50px;
+  }
   section.adv .icon-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -686,6 +706,7 @@ header nav .showClose {
   header nav .ham {
     right: 40px;
     display: block;
+    outline: none;
   }
   .header .navbar ul li {
     padding: 15px;
@@ -770,6 +791,13 @@ header nav .showClose {
   header nav .ham {
     right: 40px;
     display: block;
+    outline: none;
+  }
+  .header .navbar ul li {
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.1;
+    margin-bottom: 20px;
   }
 }
 

@@ -582,7 +582,7 @@ footer p {
 
 header nav .ham {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 40px;
   right: 80px;
   z-index: 100;
@@ -601,7 +601,7 @@ header nav .showClose {
 }
 
 header nav .ham_menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: black;
@@ -686,6 +686,15 @@ header nav .showClose {
 @media only screen and (min-width: 280px) and (max-width: 599px) {
   .container {
     max-width: 320px;
+  }
+  section.about {
+    margin-bottom: 20px;
+  }
+  section.about .container a {
+    display: inline;
+  }
+  section.about2 {
+    padding-bottom: 50px;
   }
   section.adv .icon-container {
     -ms-grid-columns: 1fr;
@@ -1074,25 +1083,15 @@ section.reserve .inner-reserve button {
   transition: 400ms;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
+  padding-top: 40px;
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
 
 .modal .inner-modal {
