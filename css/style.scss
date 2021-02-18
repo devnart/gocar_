@@ -463,8 +463,9 @@ footer {
 header {
   nav {
     .ham {
+
       display: none;
-      position: absolute;
+      position: fixed;
       top: 40px;
       right: 80px;
       z-index: 100;
@@ -482,7 +483,7 @@ header {
     }
 
     .ham_menu {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       background: black;
@@ -571,6 +572,17 @@ header {
 @media only screen and (min-width: 280px) and (max-width: 599px) {
   .container {
     max-width: 320px;
+  }
+  section.about {
+      margin-bottom: 20px;
+      .container {
+          a {
+              display: inline;
+          }
+      }
+  }
+  section.about2 {
+    padding-bottom: 50px;
   }
   section.adv {
     .icon-container {
